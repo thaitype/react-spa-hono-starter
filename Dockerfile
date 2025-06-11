@@ -1,7 +1,10 @@
 # syntax = docker/dockerfile:1
 
-# ----- Base Stage (For Build) -----
+# Setup bun version
 ARG BUN_VERSION=1.2.15
+
+# ----- Base Stage (For Build) -----
+
 FROM oven/bun:${BUN_VERSION}-slim AS base
 
 RUN apt-get update -qq && \
@@ -28,8 +31,6 @@ RUN pnpm build
 # -----------------------
 # ---- Runtime Stage ----
 # -----------------------
-
-ARG BUN_VERSION=1.2.15
 FROM oven/bun:${BUN_VERSION}-slim AS runtime
 # FROM base AS runtime
 
