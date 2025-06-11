@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun src/index.ts",
+    "dev": "bun --watch src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "engines": {
+    "bun": "^1.2.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.0",
+    "hono": "^4.7.11",
+    "zod": "^3.25.57"
+  }
+}

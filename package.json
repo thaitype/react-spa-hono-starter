@@ -1,0 +1,23 @@
+{
+  "name": "react-spa-hono-starter",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "dev:server": "turbo -F server dev",
+    "upgrade-deps": "npx taze -r --interactive",
+    "check-deps": "npx taze -r"
+  },
+  "devDependencies": {
+    "npm-run-all2": "^8.0.3",
+    "turbo": "^2.5.3"
+  },
+  "packageManager": "pnpm@10.11.0"
+}
