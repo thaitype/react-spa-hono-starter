@@ -1,5 +1,7 @@
 # React SPA Hono Starter
 
+> Note: This is a work in progress. It is not yet ready for production use.
+> But it is a good starting point for building a React SPA with Hono.
 
 - Mantine, use this template: https://github.com/mantinedev/next-app-min-template
 - use some part of :
