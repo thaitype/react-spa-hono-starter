@@ -2,7 +2,7 @@
 
 # ----- Base Stage (For Build) -----
 ARG BUN_VERSION=1.2.15
-FROM oven/bun:${BUN_VERSION}-slim as base
+FROM oven/bun:${BUN_VERSION}-slim AS base
 
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y nodejs npm
@@ -30,7 +30,7 @@ RUN pnpm build
 # -----------------------
 
 ARG BUN_VERSION=1.2.15
-FROM oven/bun:${BUN_VERSION}-slim as runtime
+FROM oven/bun:${BUN_VERSION}-slim AS runtime
 # FROM base AS runtime
 
 # Support fly.io, ref: https://fly.io/javascript-journal/demystify-docker-js/
@@ -61,4 +61,4 @@ USER app
 
 WORKDIR /app/apps/server
 
-CMD bun run ./dist/index.js
+CMD [ "bun", "run", "./dist/index.js" ]
