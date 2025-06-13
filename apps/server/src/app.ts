@@ -9,7 +9,7 @@ const app = new Hono();
 
 app.use("*", logger());
 
-const apiRoutes = app.basePath("/api").route("/expenses", expensesRoute)
+export const apiRoutes = app.basePath("/api").route("/expenses", expensesRoute)
 
 // Serve static files from the frontend build directory
 app.get("*", serveStatic({ root: FRONTEND_PATH }));
@@ -17,4 +17,3 @@ app.get("*", serveStatic({ root: FRONTEND_PATH }));
 app.get("*", serveStatic({ root: FRONTEND_PATH, path: "index.html" }));
 
 export default app;
-export type ApiRoutes = typeof apiRoutes;

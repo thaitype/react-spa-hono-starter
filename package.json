@@ -1,5 +1,5 @@
 {
-  "name": "react-spa-hono-starter",
+  "name": "@acme/root",
   "private": true,
   "workspaces": [
     "apps/*",
