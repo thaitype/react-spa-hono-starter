@@ -62,4 +62,4 @@ USER app
 
 WORKDIR /app/apps/server
 
-CMD [ "bun", "run", "./dist/index.js" ]
+CMD [ "bun", "run", "./dist/main.js" ]

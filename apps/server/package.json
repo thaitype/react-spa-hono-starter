@@ -1,12 +1,15 @@
 {
-  "name": "server",
+  "name": "@acme/server",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
-    "start": "bun src/index.ts",
-    "build": "bun build --sourcemap=linked ./src/index.ts --outdir ./dist",
-    "dev": "bun --watch src/index.ts"
+    "start": "bun src/main.ts",
+    "build": "bun build --sourcemap=linked ./src/main.ts --outdir ./dist",
+    "dev": "bun --watch src/main.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
